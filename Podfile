@@ -134,6 +134,7 @@ target 'Artsy' do
   pod 'RNCAsyncStorage', path: 'node_modules/@react-native-community/async-storage'
   pod 'RNCPicker', path: 'node_modules/@react-native-community/picker'
   pod 'BVLinearGradient', path: './node_modules/react-native-linear-gradient'
+  pod 'RNReactNativeHapticFeedback', :path => 'node_modules/react-native-haptic-feedback'
 
   # For Stripe integration with Emission. Using Ash's fork for this issue: https://github.com/tipsi/tipsi-stripe/issues/408
   pod 'Pulley', :git => 'https://github.com/l2succes/Pulley.git', :branch => 'master'
