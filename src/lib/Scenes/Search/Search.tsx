@@ -10,7 +10,7 @@ import { useTracking } from "react-tracking"
 import styled from "styled-components/native"
 import { AutosuggestResults } from "./AutosuggestResults"
 import { CityGuideCTA } from "./CityGuideCTA"
-import { ProvideRecentSearches, RecentSearches, useRecentSearches } from "./RecentSearches"
+import { ProvideRecentSearches, RecentSearchContext, RecentSearches } from "./RecentSearches"
 import { SearchContext } from "./SearchContext"
 
 const SearchPage: React.FC = () => {
@@ -18,7 +18,7 @@ const SearchPage: React.FC = () => {
   const [query, setQuery] = useState("")
   const queryRef = useRef(query)
   queryRef.current = query
-  const { recentSearches } = useRecentSearches()
+  const recentSearches = RecentSearchContext.useStoreState(state => state.searches)
   const [inputFocused, setInputFocused] = useState(false)
   const {
     safeAreaInsets: { top },
